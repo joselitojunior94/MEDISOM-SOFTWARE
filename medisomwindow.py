@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-
+# first contribuition from vfrsvidal is just this line haha
 # Form implementation generated from reading ui file 'medisomwindow.ui'
 #
 # Created by: PyQt4 UI code generator 4.11.4
