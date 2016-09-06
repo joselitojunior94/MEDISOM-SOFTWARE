@@ -11,7 +11,9 @@ O programa de Firmaware foi feito brilhantemente por Vitor Fernando Rezende da S
 Basicamente, o programa vai ler os dados passados de um arquivo .txt que foi gerado do firmaware. Este arquivo vem com uma formatação padrão para que o software possa desempenhar a sua função. 
 
 A formação é:
+
 Diâmetro do duto
+
 X;Y;Z;intensidade
 
 Se o arquivo estiver fora desta formatação, a plotagem do gráfico vai estar errada! Portanto, se atentem para que o formato do arquivo esteja certo!
