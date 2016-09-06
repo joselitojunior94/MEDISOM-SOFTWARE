@@ -1,6 +1,4 @@
-# MEDISOM-SOFTWARE por Joselito Mota Júnior
-
-MEDISOM Graphics Viewer Software 
+# MEDISOM GRAPHICS VIEWER SOFTWARE por Joselito Mota Júnior
 
 Esse é um software de visualização de pontos gerados pelo firmaware do projeto de pesquisa Medic/Medisom que foi financiado pela Fapesb em 2015.
 
