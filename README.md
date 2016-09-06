@@ -1,12 +1,12 @@
 # MEDISOM GRAPHICS VIEWER SOFTWARE por Joselito Mota Júnior
 
-Esse é um software de visualização de pontos gerados pelo firmaware do projeto de pesquisa Medic/Medisom que foi financiado pela Fapesb em 2015.
+Esse é um software de visualização de pontos gerados pelo firmware do projeto de pesquisa Medic/Medisom que foi financiado pela Fapesb em 2015.
 
 Basicamente este programa vai plotar o gráfico com os pontos passados desse programa.
 
 O programa de Firmware foi feito brilhantemente por Vitor Fernando Rezende da Silva Vidal que ao meu lado conseguiu desenvolver a integração do firmware com o software de visualização. 
 
-Basicamente, o programa vai ler os dados passados de um arquivo .txt que foi gerado do firmaware. Este arquivo vem com uma formatação padrão para que o software possa desempenhar a sua função. 
+Basicamente, o programa vai ler os dados passados de um arquivo .txt que foi gerado do firmware. Este arquivo vem com uma formatação padrão para que o software possa desempenhar a sua função. 
 
 A formação é:
 
