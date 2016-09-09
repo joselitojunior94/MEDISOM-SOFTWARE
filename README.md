@@ -1,4 +1,4 @@
-# MEDISOM GRAPHICS VIEWER SOFTWARE por Joselito Mota Júnior
+# MEDISOM GRAPHICS VIEWER SOFTWARE
 
 Projeto Medisom é composto por : 
 
