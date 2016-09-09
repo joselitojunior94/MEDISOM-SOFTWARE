@@ -8,7 +8,7 @@ Projeto Medisom é composto por :
  - Luan da Cruz Silva - Aluno de Iniciação Cientifica.
  - Vitor Fernando Rezende da Silva Vidal - Aluno de Iniciação Cientifica.
  
-Medic/Medisom é uma plataforma mecatrônica de Medição para Estudos de Campos de Radiações Ultrassônicas.
+Medisom é uma plataforma mecatrônica de Medição para Estudos de Campos de Radiações Ultrassônicas.
 
 Os membros do projeto trabalharam para que cada parte fosse feita( Hardware, Firmware e Software). 
 
