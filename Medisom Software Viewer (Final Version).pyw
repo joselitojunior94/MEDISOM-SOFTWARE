@@ -586,12 +586,11 @@ def mapa3D(X, Y, Z, intes):
         ax.set_zlabel('EIXO Z (m.m)')
 
         plt.title("Grafico 3D Medisom Beta V1.1")
-        ###########################################################################
+       
         plt.get_current_fig_manager().window.wm_geometry("+450+200")
         plt.draw()
         plt.show(block = False)
 
-####################################OVER#######################################
 def mapa2Dfor3D(X, Y, D, Z, intes):
 
         gs = gridspec.GridSpec(2, 2,
@@ -607,84 +606,84 @@ def mapa2Dfor3D(X, Y, D, Z, intes):
         ax.set_xticks([0, 30, 50])
 
         ax.set_yticks([-8, 20])        
-        X0 = [] # Ponto X
-        Y0 = [] # Ponto Y
+        X0 = [] 
+        Y0 = [] 
         Z0 = []
 
-        X1 = [] # Ponto X
-        Y1 = [] # Ponto Y
+        X1 = [] 
+        Y1 = [] 
         Z1 = []
 
-        X2 = [] # Ponto X
-        Y2 = [] # Ponto Y
+        X2 = [] 
+        Y2 = [] 
         Z2 = []
 
-        X3= [] # Ponto X
-        Y3 = [] # Ponto Y
+        X3= [] 
+        Y3 = [] 
         Z3 = []
 
-        X4= [] # Ponto X
-        Y4 = [] # Ponto Y
+        X4= [] 
+        Y4 = [] 
         Z4 = []
 
-        X5= [] # Ponto X
-        Y5 = [] # Ponto Y
+        X5= [] 
+        Y5 = [] 
         Z5 = []
 
-        X6= [] # Ponto X
-        Y6 = [] # Ponto Y
+        X6= [] 
+        Y6 = [] 
         Z6 = []
 
-        X7= [] # Ponto X
-        Y7 = [] # Ponto Y
+        X7= [] 
+        Y7 = [] 
         Z7 = []
 
-        X8= [] # Ponto X
-        Y8 = [] # Ponto Y
+        X8= [] 
+        Y8 = [] 
         Z8 = []
 
-        X9= [] # Ponto X
-        Y9 = [] # Ponto Y
+        X9= [] 
+        Y9 = [] 
         Z9 = []
 
-        X10= [] # Ponto X
-        Y10 = [] # Ponto Y
+        X10= [] 
+        Y10 = [] 
         Z10 = []
 
-        X11= [] # Ponto X
-        Y11 = [] # Ponto Y
+        X11= [] 
+        Y11 = [] 
         Z11= []
 
-        X12= [] # Ponto X
-        Y12 = [] # Ponto Y
+        X12= [] 
+        Y12 = [] 
         Z12 = []
 
-        X13= [] # Ponto X
-        Y13 = [] # Ponto Y
+        X13= [] 
+        Y13 = [] 
         Z13 = []
 
-        X14= [] # Ponto X
-        Y14 = [] # Ponto Y
+        X14= [] 
+        Y14 = [] 
         Z14 = []
 
-        X15 = [] # Ponto X
-        Y15 = [] # Ponto Y
+        X15 = [] 
+        Y15 = [] 
         Z15 = []
 
-        X16= [] # Ponto X
-        Y16 = [] # Ponto Y
+        X16= [] 
+        Y16 = [] 
         Z16 = []
 
-        X17= [] # Ponto X
-        Y17 = [] # Ponto Y
+        X17= [] 
+        Y17 = [] 
         Z17 = []
 
-        X18 = [] # Ponto X
-        Y18 = [] # Ponto Y
+        X18 = [] 
+        Y18 = [] 
         Z18 = []
 
-        X19= [] # Ponto X
-        Y19= [] # Ponto Y
+        X19= [] 
+        Y19= [] 
         Z19= []
 
         i = 0
@@ -941,13 +940,12 @@ def mapa2Dfor3D(X, Y, D, Z, intes):
         title = "DISCO: " + str(Z)
         plt.title(title)
 
-        ###########################################################################
-        #
+        
+        
         #plt.get_current_fig_manager().window.wm_geometry("+850+200")        
         plt.draw()
         plt.show(block = False)
     
-####################################OVER#######################################
 root = Tk()
 root.withdraw()
 vfile = abertura_de_arquivo()
@@ -956,10 +954,10 @@ line = vfile.readline()
 
 radius = float(line)/2
 
-X = [] # Ponto X
-Y = [] # Ponto Y
-Z = [] # Ponto Z
-intes = [] # Intensidade
+X = [] 
+Y = [] 
+Z = [] 
+intes = [] 
 
 line = vfile.readline()
 
