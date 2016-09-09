@@ -12,7 +12,7 @@ Medisom é uma plataforma mecatrônica de Medição para Estudos de Campos de Ra
 
 Os membros do projeto trabalharam para que cada parte fosse feita( Hardware, Firmware e Software). 
 
-Para mais informações sobre a parte mecânica ou o escopo do projeto, veja o vídeo para o DCC Demo Day em: https://youtu.be/EecQuuVCOqs
+Para mais informações sobre a parte mecânica ou o escopo do projeto, veja o vídeo para o DCC Demo Day em: https://youtu.be/EecQuuVCOqs ou leia o relatório que está disponível acima.
 
 Este código é referente só a parte do Software. Portanto, não aprofundarei sobre o projeto em si.
 
