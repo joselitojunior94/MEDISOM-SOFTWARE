@@ -14,7 +14,9 @@ Os membros do projeto trabalharam para que cada parte fosse feita( Hardware, Fir
 
 Para mais informações sobre a parte mecânica ou o escopo do projeto, veja o vídeo para o DCC Demo Day em: https://youtu.be/EecQuuVCOqs ou leia o relatório que está disponível acima.
 
-Este código é referente só a parte do Software. Portanto, não aprofundarei sobre o projeto em si.
+Cada aluno ficou responsável por módulos do projeto: Hardware, Firmware e Software. 
+
+Este código é referente só sobre o Software, parte em que trabalhei neste projeto. Portanto, tratarei apenas sobre a aplicação de visualização. 
 
 Esse é um software de visualização de pontos gerados pelo firmware do projeto de pesquisa Medic/Medisom que foi financiado pela Fapesb em 2015.
 
