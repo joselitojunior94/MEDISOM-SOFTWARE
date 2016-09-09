@@ -1,5 +1,19 @@
 # MEDISOM GRAPHICS VIEWER SOFTWARE por Joselito Mota Júnior
 
+Projeto Medisom é composto por : 
+
+ - Paul Denis  Etienne Regnier - Orientador
+ - Camila Moura Ferreira Santos
+ - Joselito Mota Júnior
+ - Luan da Cruz Silva
+ - Vitor Fernando Rezende da Silva Vidal
+ 
+Medic/Medisom é uma plataforma mecatrônica de Medição para Estudos de Campos de Radiações Ultrassônicas.
+
+Todos os membros do projeto trabalharam para que cada parte fosse feita( Hardware, Firmware e Software). 
+
+Este código é referente só a parte do Software. Portanto, não aprofundarei sobre o projeto em si.
+
 Esse é um software de visualização de pontos gerados pelo firmware do projeto de pesquisa Medic/Medisom que foi financiado pela Fapesb em 2015.
 
 Basicamente este programa vai plotar o gráfico com os pontos passados desse programa.
