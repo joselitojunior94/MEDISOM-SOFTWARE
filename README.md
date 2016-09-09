@@ -3,14 +3,16 @@
 Projeto Medisom é composto por : 
 
  - Paul Denis  Etienne Regnier - Orientador
- - Camila Moura Ferreira Santos
- - Joselito Mota Júnior
- - Luan da Cruz Silva
- - Vitor Fernando Rezende da Silva Vidal
+ - Camila Moura Ferreira Santos - Aluna de Mestrado pela UFBA
+ - Joselito Mota Júnior - Aluno de Iniciação Cientifica.
+ - Luan da Cruz Silva - Aluno de Iniciação Cientifica.
+ - Vitor Fernando Rezende da Silva Vidal - Aluno de Iniciação Cientifica.
  
 Medic/Medisom é uma plataforma mecatrônica de Medição para Estudos de Campos de Radiações Ultrassônicas.
 
-Todos os membros do projeto trabalharam para que cada parte fosse feita( Hardware, Firmware e Software). 
+Os membros do projeto trabalharam para que cada parte fosse feita( Hardware, Firmware e Software). 
+
+Para mais informações sobre a parte mecânica ou o escopo do projeto, veja o vídeo para o DCC Demo Day em: https://youtu.be/EecQuuVCOqs
 
 Este código é referente só a parte do Software. Portanto, não aprofundarei sobre o projeto em si.
 
