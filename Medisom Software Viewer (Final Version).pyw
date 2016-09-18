@@ -3,6 +3,7 @@ import matplotlib.patches as patches
 import ttk
 import matplotlib.gridspec as gridspec
 import tkMessageBox
+import sys
 from functools import partial
 from Tkinter import *
 from tkFileDialog import *
@@ -601,14 +602,14 @@ def mapa3D(X, Y, Z, intes):
 
 
 def newWindow():
-     	about = Tk()
+        about = Tk()
        
         about.geometry("350x70+600+80")
         about.resizable(0,0)
         about.title("Medisom Software Viewer - Development")
-	Label(about, text = t1 ).pack()
-	Label(about, text = 'Aluno de Ciencia da Computacao UFBA').pack()
-	about.protocol("WM_DELETE_WINDOW",  about.destroy)
+        Label(about, text = t1 ).pack()
+        Label(about, text = 'Aluno de Ciencia da Computacao UFBA').pack()
+        about.protocol("WM_DELETE_WINDOW",  about.destroy)
         about.mainloop()
 
 def mapa2Dfor3D(X, Y, D, Z, intes):
@@ -967,9 +968,9 @@ def mapa2Dfor3D(X, Y, D, Z, intes):
         plt.show(block = False)
 
 def dest():
-	if tkMessageBox.askokcancel("Sair", "Deseja sair?*"):
-		root.quit()
-		sys.exit(0)
+    if tkMessageBox.askokcancel("Sair", "Deseja sair?*"):
+        root.destroy()
+        sys.exit(0)
     
 root = Tk()
 root.withdraw()
