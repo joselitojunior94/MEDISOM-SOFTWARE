@@ -2,11 +2,17 @@ import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 import ttk
 import matplotlib.gridspec as gridspec
+import tkMessageBox
 from functools import partial
 from Tkinter import *
 from tkFileDialog import *
 from mpl_toolkits.mplot3d import Axes3D
 
+"""
+Autor : Joselito Mota Junior  BCC  UFBA
+
+"""
+        
 def generate_new():
         axis = float(combobox.get())
         mapa2Dfor3D(X, Y, Z, axis, intes)        
@@ -24,7 +30,8 @@ def abertura_de_arquivo():
                 arq = open(fileName)
                 return arq
         except Exception:
-                sys.exit(0)           
+                sys.exit(0)        
+t1 = 'Software de Visualizacao criado por:'   
 def mapa2D(X, Y, Z, intes, disco, radius):
         gs = gridspec.GridSpec(2, 2, width_ratios=[1,4], height_ratios=[50,1])   
         fig = plt.figure()
@@ -239,7 +246,8 @@ def mapa2D(X, Y, Z, intes, disco, radius):
         plt.title(title) 
         #plt.get_current_fig_manager().window.wm_geometry("+100+200")
         plt.draw()
-        plt.show(block = False)      
+        plt.show(block = False)
+t1 = t1 + 'Joselito Junior' 
 def mapa3D(X, Y, Z, intes):
         gs = gridspec.GridSpec(2, 2, width_ratios=[1,4], height_ratios=[50,1])
         fig = plt.figure()
@@ -590,6 +598,18 @@ def mapa3D(X, Y, Z, intes):
         plt.get_current_fig_manager().window.wm_geometry("+450+200")
         plt.draw()
         plt.show(block = False)
+
+
+def newWindow():
+     	about = Tk()
+       
+        about.geometry("350x70+600+80")
+        about.resizable(0,0)
+        about.title("Medisom Software Viewer - Development")
+	Label(about, text = t1 ).pack()
+	Label(about, text = 'Aluno de Ciencia da Computacao UFBA').pack()
+	about.protocol("WM_DELETE_WINDOW",  about.destroy)
+        about.mainloop()
 
 def mapa2Dfor3D(X, Y, D, Z, intes):
 
@@ -945,6 +965,11 @@ def mapa2Dfor3D(X, Y, D, Z, intes):
         #plt.get_current_fig_manager().window.wm_geometry("+850+200")        
         plt.draw()
         plt.show(block = False)
+
+def dest():
+	if tkMessageBox.askokcancel("Sair", "Deseja sair?*"):
+		root.quit()
+		sys.exit(0)
     
 root = Tk()
 root.withdraw()
@@ -997,8 +1022,13 @@ while(i<len(Z)):
 combobox.config(values = tuple(Zs))
 combobox.bind('<<ComboboxSelected>>', combobox_handler)
 combobox.pack()
+menubar = Menu(root)
+root.config(menu=menubar)
+fileMenu = Menu(menubar)
+fileMenu.add_command(label="More", command=newWindow)
+menubar.add_cascade(label="About", menu=fileMenu)
 button = Button(root, text = 'Gerar 3D',command = generate_new)
 button.config(state='disable')
 button.pack()
-
+root.protocol("WM_DELETE_WINDOW", dest)
 root.mainloop()
