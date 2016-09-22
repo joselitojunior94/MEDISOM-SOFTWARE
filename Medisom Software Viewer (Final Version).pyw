@@ -590,9 +590,9 @@ def mapa3D(X, Y, Z, intes):
         ax.scatter(X18, Y18, Z18,c = colors[18], s = 60, alpha=.5)
         ax.scatter(X19, Y19, Z19,c = colors[19], s = 80, alpha=.5)
 
-        ax.set_xlabel('EIXO X (m.m)')
-        ax.set_ylabel('EIXO Y (m.m)')
-        ax.set_zlabel('EIXO Z (m.m)')
+        ax.set_xlabel('EIXO X')
+        ax.set_ylabel('EIXO Y')
+        ax.set_zlabel('EIXO Z')
 
         plt.title("Grafico 3D Medisom Beta V1.1")
        
@@ -955,9 +955,9 @@ def mapa2Dfor3D(X, Y, D, Z, intes):
         ax.scatter(X18, Y18, Z18,c = colors[18], s = 60, alpha=.5)
         ax.scatter(X19, Y19, Z19,c = colors[19], s = 80, alpha=.5)
         
-        ax.set_xlabel('EIXO X (m.m)')
-        ax.set_ylabel('EIXO Y (m.m)')
-        ax.set_zlabel('EIXO Z (m.m)')
+        ax.set_xlabel('EIXO X')
+        ax.set_ylabel('EIXO Y')
+        ax.set_zlabel('EIXO Z')
         title = "DISCO: " + str(Z)
         plt.title(title)
 
