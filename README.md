@@ -22,9 +22,7 @@ Esse é um software de visualização de pontos gerados pelo firmware do projeto
 
 Basicamente este programa vai plotar o gráfico com os pontos passados desse programa.
 
-O programa de Firmware foi feito brilhantemente por Vitor Fernando Rezende da Silva Vidal que ao meu lado conseguiu desenvolver a integração do firmware com o software de visualização. 
-
-Basicamente, o programa vai ler os dados passados de um arquivo .txt que foi gerado do firmware. Este arquivo vem com uma formatação padrão para que o software possa desempenhar a sua função. 
+O programa vai ler os dados passados de um arquivo .txt que foi gerado do firmware. Este arquivo vem com uma formatação padrão para que o software possa desempenhar a sua função. 
 
 A formação é:
 
