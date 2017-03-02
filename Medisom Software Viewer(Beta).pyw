@@ -970,7 +970,7 @@ def mapa2Dfor3D(X, Y, D, Z, intes):
 def dest():
     if tkMessageBox.askokcancel("Sair", "Deseja sair?*"):
         root.destroy()
-        #sys.exit(0)
+        sys.exit(0)
     
 root = Tk()
 root.withdraw()
