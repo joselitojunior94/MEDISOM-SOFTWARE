@@ -1,6 +1,6 @@
 # MEDISOM / MEDIC GRAPHICS VIEWER SOFTWARE
 
-Projeto Medisom é composto por : 
+Projeto Medisom / Medic é composto por : 
 
  - Paul Denis  Etienne Regnier - Orientador
  - Camila Moura Ferreira Santos - Aluna de Mestrado pela UFBA
