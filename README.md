@@ -62,6 +62,6 @@ Depois de encontrado, clique em Abrir.
 
 A tela de seleção de pontos vai estar pronta para uso. 
 
-Mais informações só sequir o relatório que está neste repositório. Lá mostra as telas e detalha sobre todo o processo do projeto.
+Mais informações só seguir o relatório que está neste repositório. Lá mostra as telas e detalha sobre todo o processo do projeto.
 
 O Software é apresentado no estado em que se encontra neste repositório, sem garantia de qualquer tipo, expressa ou implícita. Em nenhuma circunstância o autor será responsável por qualquer reclamação, danos ou outra responsabilidade. O uso do Software fica por conta e risco do usuário.
