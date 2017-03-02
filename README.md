@@ -64,8 +64,7 @@ A tela de seleção de pontos vai estar pronta para uso.
 
 Mais informações só sequir o relatório que está neste repositório. Lá mostra as telas e detalha sobre todo o processo do projeto.
 
-Por: Joselito Mota Júnior.
-.
+O SOFTWARE É APRESENTADO NO ESTADO EM QUE SE ENCONTRA, SEM GARANTIA DE QUALQUER TIPO, EXPRESSA OU IMPLÍCITA. EM NENHUMA CIRCUNSTÂNCIA OS AUTORES SERÃO RESPONSÁVEIS POR QUALQUER RECLAMAÇÃO, DANOS OU OUTRA RESPONSABILIDADE. O USO DO SOFTWARE É POR CONTA E RISCO DO USUÁRIO.
 
 
 
