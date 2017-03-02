@@ -997,7 +997,7 @@ axis = 0
 root = Tk()
 root.geometry("350x70+600+80")
 root.resizable(0,0)
-root.title("Medisom Software Viewer Beta")
+root.title("Medisom/Medic Software Viewer Beta")
 mlabel = Label(root, text = 'Selecione o disco para exibir:').pack()
 text = StringVar()
 combobox = ttk.Combobox(root, textvariable = text)
