@@ -15,6 +15,16 @@ Desenvolvidor por : Joselito Mota Junior  BCC  UFBA
 
 """
 
+def Convert(number):
+    number_dec = number % 1
+    #print(type(number))
+    number_dec = int(round(number_dec,1) *10)
+    #print(number_dec)
+    if(number_dec <= 6):
+        return math.floor(float(number))
+    else:
+        return math.ceil(float(number)) 
+
 def out():
         sys.exit(0)
 def generate_new():
@@ -107,7 +117,7 @@ def mapa2D(X, Y, Z, intes, disco, radius):
         i = 0
         while(i<len(Z)):
                 if(Z[i] == disco):
-                        value = math.ceil((intes[i]-MIN)/DELTA)
+                        value = Convert(((intes[i]-MIN)/DELTA))
                         if(value == 0):
                                 X0.append(X[i])
                                 Y0.append(Y[i]) 
@@ -165,36 +175,37 @@ def mapa2D(X, Y, Z, intes, disco, radius):
                         elif(value == 18):
                                 X18.append(X[i])
                                 Y18.append(Y[i]) 
-                        elif(value == 19):
+                        elif(value >= 19):
                                 X19.append(X[i])
                                 Y19.append(Y[i])
                 i +=1
+        
         colors = ('#1a237e', '#0000FF', '#1565c0', '#0288d1', '#0097a7', '#00acc1', '#00bcd4'
           , '#009688', '#4caf50', '#66bb6a', '#7cb342', '#c0ca33', '#fff176', '#fdd835'
           ,'#fb8c00' , '#ff8f00', '#f57f17', '#e65100', '#d84315', '#b71c1c')
         r = 13.0
         ax.text(12.5, 17 ,'Intensidade', fontsize=10)
 
-        ax.text(r +3.5, (r/2) - 10 ,'0,00 V -|'+str(round((MIN*0.00488),2))+'V', fontsize=8)
-        ax.text(r +3.5, (r/2)- 8.9 ,str(round((MIN*0.00488),2))+'V -|'+str(round(((MIN+(DELTA*2)) *0.00488),2))+'V', fontsize=8)
-        ax.text(r +3.5, (r/2)- 7.9 ,str(round(((MIN+(DELTA*2))) *0.00488,2))+'V -|'+str(round(((MIN+(DELTA*3)) *0.00488),2))+'V', fontsize=8)
-        ax.text(r +3.5, (r/2)- 6.9 ,str(round(((MIN+(DELTA*3)) *0.00488),2))+'V -|'+str(round(((MIN+(DELTA*4)) *0.00488),2))+'V', fontsize=8)
-        ax.text(r +3.5, (r/2)- 5.9 ,str(round(((MIN+(DELTA*4)) *0.00488),2))+'V -|'+str(round(((MIN+(DELTA*5)) *0.00488),2))+'V', fontsize=8)
-        ax.text(r +3.5, (r/2)- 4.9 ,str(round(((MIN+(DELTA*5)) *0.00488),2))+'V -|'+str(round(((MIN+(DELTA*6)) *0.00488),2))+'V', fontsize=8)
-        ax.text(r +3.5, (r/2)- 3.9 ,str(round(((MIN+(DELTA*6)) *0.00488),2))+'V -|'+str(round((MIN+(DELTA*7)) *0.00488,2))+'V', fontsize=8)
-        ax.text(r +3.5, (r/2)- 2.9 ,str(round(((MIN+(DELTA*7)) *0.00488),2))+'V -|'+str(round(((MIN+(DELTA*8)) *0.00488),2))+'V', fontsize=8)
-        ax.text(r +3.5, (r/2)- 1.9 ,str(round(((MIN+(DELTA*8)) *0.00488),2))+'V -|'+str(round(((MIN+(DELTA*9)) *0.00488),2))+'V', fontsize=8)
-        ax.text(r +3.5, (r/2)- 0.9,str(round(((MIN+(DELTA*9)) *0.00488),2))+'V -|'+str(round(((MIN+(DELTA*10)) *0.00488),2))+'V', fontsize=8)
-        ax.text(r +3.5, (r/2) ,str(round(((MIN+(DELTA*10)) *0.00488),2))+'V -|'+str(round(((MIN+(DELTA*11)) *0.00488),2))+'V', fontsize=8)
-        ax.text(r +3.5, (r/2)+0.9 ,str(round(((MIN+(DELTA*11)) *0.00488),2))+'V -|'+str(round(((MIN+(DELTA*12)) *0.00488),2))+'V', fontsize=8)
-        ax.text(r +3.5, (r/2)+ 1.9 ,str(round(((MIN+(DELTA*12)) *0.00488),2))+'V -|'+str(round(((MIN+(DELTA*13)) *0.00488),2))+'V', fontsize=8)
-        ax.text(r +3.5, (r/2)+ 2.9 ,str(round(((MIN+(DELTA*13)) *0.00488),2))+'V -|'+str(round(((MIN+(DELTA*14)) *0.00488),2))+'V', fontsize=8)
-        ax.text(r +3.5, (r/2)+ 3.9 ,str(round(((MIN+(DELTA*14)) *0.00488),2))+'V -|'+str(round(((MIN+(DELTA*15)) *0.00488),2))+'V', fontsize=8)
-        ax.text(r +3.5, (r/2)+ 4.9 ,str(round(((MIN+(DELTA*15)) *0.00488),2))+'V -|'+str(round(((MIN+(DELTA*16)) *0.00488),2))+'V', fontsize=8)
-        ax.text(r +3.5, (r/2)+ 5.9 ,str(round(((MIN+(DELTA*16)) *0.00488),2))+'V -|'+str(round(((MIN+(DELTA*17)) *0.00488),2))+'V', fontsize=8)
-        ax.text(r +3.5, (r/2)+ 6.9 ,str(round(((MIN+(DELTA*17)) *0.00488),2))+'V -|'+str(round(((MIN+(DELTA*18)) *0.00488),2))+'V', fontsize=8)
-        ax.text(r +3.5, (r/2)+ 7.9 ,str(round(((MIN+(DELTA*18)) *0.00488),2))+'V -|'+str(round(((MIN+(DELTA*19)) *0.00488),2))+'V', fontsize=8)
-        ax.text(r +3.5, (r/2)+ 8.9 ,str(round(((MIN+(DELTA*19)) *0.00488),2))+'V -|'+str(round(((MIN+(DELTA*20)) *0.00488),2))+'V', fontsize=8)
+        ax.text(r +3.5, (r/2) - 10 ,str(int(MIN))+' -|'+str(int(math.floor(MIN+DELTA))),fontsize=8)
+        ax.text(r +3.5, (r/2)- 8.9 ,str(int(math.floor(MIN+DELTA)))+' -|'+str(int(math.floor(MIN+(DELTA*2)))), fontsize=8)
+        ax.text(r +3.5, (r/2)- 7.9 ,str(int(math.floor(MIN+(DELTA*2))))+' -|'+str(int(math.floor(MIN+(DELTA*3)))), fontsize=8)
+        ax.text(r +3.5, (r/2)- 6.9 ,str(int(math.floor(MIN+(DELTA*3))))+' -|'+str(int(math.floor(MIN+(DELTA*4)))), fontsize=8)
+        ax.text(r +3.5, (r/2)- 5.9 ,str(int(math.floor(MIN+(DELTA*4))))+' -|'+str(int(math.floor(MIN+(DELTA*5)))), fontsize=8)
+        ax.text(r +3.5, (r/2)- 4.9 ,str(int(math.floor(MIN+(DELTA*5))))+' -|'+str(int(math.floor(MIN+(DELTA*6)))), fontsize=8)
+        ax.text(r +3.5, (r/2)- 3.9 ,str(int(math.floor(MIN+(DELTA*6))))+' -|'+str(int(math.floor(MIN+(DELTA*7)))), fontsize=8)
+        ax.text(r +3.5, (r/2)- 2.9 ,str(int(math.floor(MIN+(DELTA*7))))+' -|'+str(int(math.floor(MIN+(DELTA*8)))), fontsize=8)
+        ax.text(r +3.5, (r/2)- 1.9 ,str(int(math.floor(MIN+(DELTA*8))))+' -|'+str(int(math.floor(MIN+(DELTA*9)))), fontsize=8)
+        ax.text(r +3.5, (r/2)- 0.9,str(int(math.floor(MIN+(DELTA*9))))+' -|'+str(int(math.floor(MIN+(DELTA*10)))), fontsize=8)
+        ax.text(r +3.5, (r/2) ,str(int(math.ceil(MIN+(DELTA*10))))+' -|'+str(int(math.floor(MIN+(DELTA*11)))), fontsize=8)
+        ax.text(r +3.5, (r/2)+0.9 ,str(int(math.floor(MIN+(DELTA*11))))+' -|'+str(int(math.floor(MIN+(DELTA*12)))), fontsize=8)
+        ax.text(r +3.5, (r/2)+ 1.9 ,str(int(math.floor(MIN+(DELTA*12))))+' -|'+str(int(math.floor(MIN+(DELTA*13)))), fontsize=8)
+        ax.text(r +3.5, (r/2)+ 2.9 ,str(int(math.floor(MIN+(DELTA*13))))+' -|'+str(int(math.floor(MIN+(DELTA*14)))), fontsize=8)
+        ax.text(r +3.5, (r/2)+ 3.9 ,str(int(math.floor(MIN+(DELTA*14))))+' -|'+str(int(math.floor(MIN+(DELTA*15)))), fontsize=8)
+        ax.text(r +3.5, (r/2)+ 4.9 ,str(int(math.floor(MIN+(DELTA*15))))+' -|'+str(int(math.floor(MIN+(DELTA*16)))), fontsize=8)
+        ax.text(r +3.5, (r/2)+ 5.9 ,str(int(math.floor(MIN+(DELTA*16))))+' -|'+str(int(math.floor(MIN+(DELTA*17)))), fontsize=8)
+        ax.text(r +3.5, (r/2)+ 6.9 ,str(int(math.floor(MIN+(DELTA*17))))+' -|'+str(int(math.floor(MIN+(DELTA*18)))), fontsize=8)
+        ax.text(r +3.5, (r/2)+ 7.9 ,str(int(math.floor(MIN+(DELTA*18))))+' -|'+str(int(math.floor(MIN+(DELTA*19)))), fontsize=8)
+        ax.text(r +3.5, (r/2)+ 8.9 ,str(int(math.floor(MIN+(DELTA*19))))+' -|'+str(int(MAXIMO)), fontsize=8)
         
         for p in [
             patches.Rectangle((r, (r/2) - 10), r/4, r/16, color = colors [0], alpha=0.8),
@@ -344,8 +355,8 @@ def mapa3D(X, Y, Z, intes):
 
         i = 0
         while(i<len(intes)):
-                value = math.ceil((intes[i]-MIN)/DELTA)
-                if(value == 0):
+                value = Convert(((intes[i]-MIN)/DELTA))           
+                if(value <= 0):
                         X0.append(X[i])
                         Y0.append(Y[i])
                         Z0.append(Z[i]) 
@@ -420,13 +431,25 @@ def mapa3D(X, Y, Z, intes):
                 elif(value == 18):
                         X18.append(X[i])
                         Y18.append(Y[i])
-                        Z18.append(Z[i]) 
-                elif(value == 19):
+                        Z18.append(Z[i])
+                elif(value >= 19):
                         X19.append(X[i])
                         Y19.append(Y[i])
-                        Z19.append(Z[i]) 
+                        Z19.append(Z[i])
+                """print('X = '+str(X[i]))
+                print('Y = '+str(Y[i]))
+                print('Z = '+str(Z[i]))
+                print('intes = '+str(intes[i]))
+                print('Value = '+str(value))
+                print((intes[i]-MIN)/DELTA)
+                print('\n')"""
+                        
                 
                 i +=1
+
+        #rest = len(X0)+len(X1)+len(X2)+len(X3)+len(X4)+len(X5)+len(X6)+len(X7)+len(X8)+len(X9)+len(X10)+len(X11)+len(X12)+len(X13)+len(X14)+len(X15)+len(X16)+len(X17)+len(X18)+len(X19)
+        #print(rest)
+        
         colors = ('#1a237e', '#0000FF', '#1565c0', '#0288d1', '#0097a7', '#00acc1', '#00bcd4'
           , '#009688', '#4caf50', '#66bb6a', '#7cb342', '#c0ca33', '#fff176', '#fdd835'
           ,'#fb8c00' , '#ff8f00', '#f57f17', '#e65100', '#d84315', '#b71c1c')
@@ -434,26 +457,26 @@ def mapa3D(X, Y, Z, intes):
         r = 13.0
         ax.text(12.5, 17 ,'Intensidade', fontsize=10)
 
-        ax.text(r +3.5, (r/2) - 10 ,'0,00 V -|'+str(round((MIN*0.00488),2))+'V', fontsize=8)
-        ax.text(r +3.5, (r/2)- 8.9 ,str(round((MIN*0.00488),2))+'V -|'+str(round(((MIN+(DELTA*2)) *0.00488),2))+'V', fontsize=8)
-        ax.text(r +3.5, (r/2)- 7.9 ,str(round(((MIN+(DELTA*2))) *0.00488,2))+'V -|'+str(round(((MIN+(DELTA*3)) *0.00488),2))+'V', fontsize=8)
-        ax.text(r +3.5, (r/2)- 6.9 ,str(round(((MIN+(DELTA*3)) *0.00488),2))+'V -|'+str(round(((MIN+(DELTA*4)) *0.00488),2))+'V', fontsize=8)
-        ax.text(r +3.5, (r/2)- 5.9 ,str(round(((MIN+(DELTA*4)) *0.00488),2))+'V -|'+str(round(((MIN+(DELTA*5)) *0.00488),2))+'V', fontsize=8)
-        ax.text(r +3.5, (r/2)- 4.9 ,str(round(((MIN+(DELTA*5)) *0.00488),2))+'V -|'+str(round(((MIN+(DELTA*6)) *0.00488),2))+'V', fontsize=8)
-        ax.text(r +3.5, (r/2)- 3.9 ,str(round(((MIN+(DELTA*6)) *0.00488),2))+'V -|'+str(round((MIN+(DELTA*7)) *0.00488,2))+'V', fontsize=8)
-        ax.text(r +3.5, (r/2)- 2.9 ,str(round(((MIN+(DELTA*7)) *0.00488),2))+'V -|'+str(round(((MIN+(DELTA*8)) *0.00488),2))+'V', fontsize=8)
-        ax.text(r +3.5, (r/2)- 1.9 ,str(round(((MIN+(DELTA*8)) *0.00488),2))+'V -|'+str(round(((MIN+(DELTA*9)) *0.00488),2))+'V', fontsize=8)
-        ax.text(r +3.5, (r/2)- 0.9,str(round(((MIN+(DELTA*9)) *0.00488),2))+'V -|'+str(round(((MIN+(DELTA*10)) *0.00488),2))+'V', fontsize=8)
-        ax.text(r +3.5, (r/2) ,str(round(((MIN+(DELTA*10)) *0.00488),2))+'V -|'+str(round(((MIN+(DELTA*11)) *0.00488),2))+'V', fontsize=8)
-        ax.text(r +3.5, (r/2)+0.9 ,str(round(((MIN+(DELTA*11)) *0.00488),2))+'V -|'+str(round(((MIN+(DELTA*12)) *0.00488),2))+'V', fontsize=8)
-        ax.text(r +3.5, (r/2)+ 1.9 ,str(round(((MIN+(DELTA*12)) *0.00488),2))+'V -|'+str(round(((MIN+(DELTA*13)) *0.00488),2))+'V', fontsize=8)
-        ax.text(r +3.5, (r/2)+ 2.9 ,str(round(((MIN+(DELTA*13)) *0.00488),2))+'V -|'+str(round(((MIN+(DELTA*14)) *0.00488),2))+'V', fontsize=8)
-        ax.text(r +3.5, (r/2)+ 3.9 ,str(round(((MIN+(DELTA*14)) *0.00488),2))+'V -|'+str(round(((MIN+(DELTA*15)) *0.00488),2))+'V', fontsize=8)
-        ax.text(r +3.5, (r/2)+ 4.9 ,str(round(((MIN+(DELTA*15)) *0.00488),2))+'V -|'+str(round(((MIN+(DELTA*16)) *0.00488),2))+'V', fontsize=8)
-        ax.text(r +3.5, (r/2)+ 5.9 ,str(round(((MIN+(DELTA*16)) *0.00488),2))+'V -|'+str(round(((MIN+(DELTA*17)) *0.00488),2))+'V', fontsize=8)
-        ax.text(r +3.5, (r/2)+ 6.9 ,str(round(((MIN+(DELTA*17)) *0.00488),2))+'V -|'+str(round(((MIN+(DELTA*18)) *0.00488),2))+'V', fontsize=8)
-        ax.text(r +3.5, (r/2)+ 7.9 ,str(round(((MIN+(DELTA*18)) *0.00488),2))+'V -|'+str(round(((MIN+(DELTA*19)) *0.00488),2))+'V', fontsize=8)
-        ax.text(r +3.5, (r/2)+ 8.9 ,str(round(((MIN+(DELTA*19)) *0.00488),2))+'V -|'+str(round(((MIN+(DELTA*20)) *0.00488),2))+'V', fontsize=8)
+        ax.text(r +3.5, (r/2) - 10 ,str(int(MIN))+' -|'+str(int(math.floor(MIN+DELTA))),fontsize=8)
+        ax.text(r +3.5, (r/2)- 8.9 ,str(int(math.floor(MIN+DELTA)))+' -|'+str(int(math.floor(MIN+(DELTA*2)))), fontsize=8)
+        ax.text(r +3.5, (r/2)- 7.9 ,str(int(math.floor(MIN+(DELTA*2))))+' -|'+str(int(math.floor(MIN+(DELTA*3)))), fontsize=8)
+        ax.text(r +3.5, (r/2)- 6.9 ,str(int(math.floor(MIN+(DELTA*3))))+' -|'+str(int(math.floor(MIN+(DELTA*4)))), fontsize=8)
+        ax.text(r +3.5, (r/2)- 5.9 ,str(int(math.floor(MIN+(DELTA*4))))+' -|'+str(int(math.floor(MIN+(DELTA*5)))), fontsize=8)
+        ax.text(r +3.5, (r/2)- 4.9 ,str(int(math.floor(MIN+(DELTA*5))))+' -|'+str(int(math.floor(MIN+(DELTA*6)))), fontsize=8)
+        ax.text(r +3.5, (r/2)- 3.9 ,str(int(math.floor(MIN+(DELTA*6))))+' -|'+str(int(math.floor(MIN+(DELTA*7)))), fontsize=8)
+        ax.text(r +3.5, (r/2)- 2.9 ,str(int(math.floor(MIN+(DELTA*7))))+' -|'+str(int(math.floor(MIN+(DELTA*8)))), fontsize=8)
+        ax.text(r +3.5, (r/2)- 1.9 ,str(int(math.floor(MIN+(DELTA*8))))+' -|'+str(int(math.floor(MIN+(DELTA*9)))), fontsize=8)
+        ax.text(r +3.5, (r/2)- 0.9,str(int(math.floor(MIN+(DELTA*9))))+' -|'+str(int(math.floor(MIN+(DELTA*10)))), fontsize=8)
+        ax.text(r +3.5, (r/2) ,str(int(math.ceil(MIN+(DELTA*10))))+' -|'+str(int(math.floor(MIN+(DELTA*11)))), fontsize=8)
+        ax.text(r +3.5, (r/2)+0.9 ,str(int(math.floor(MIN+(DELTA*11))))+' -|'+str(int(math.floor(MIN+(DELTA*12)))), fontsize=8)
+        ax.text(r +3.5, (r/2)+ 1.9 ,str(int(math.floor(MIN+(DELTA*12))))+' -|'+str(int(math.floor(MIN+(DELTA*13)))), fontsize=8)
+        ax.text(r +3.5, (r/2)+ 2.9 ,str(int(math.floor(MIN+(DELTA*13))))+' -|'+str(int(math.floor(MIN+(DELTA*14)))), fontsize=8)
+        ax.text(r +3.5, (r/2)+ 3.9 ,str(int(math.floor(MIN+(DELTA*14))))+' -|'+str(int(math.floor(MIN+(DELTA*15)))), fontsize=8)
+        ax.text(r +3.5, (r/2)+ 4.9 ,str(int(math.floor(MIN+(DELTA*15))))+' -|'+str(int(math.floor(MIN+(DELTA*16)))), fontsize=8)
+        ax.text(r +3.5, (r/2)+ 5.9 ,str(int(math.floor(MIN+(DELTA*16))))+' -|'+str(int(math.floor(MIN+(DELTA*17)))), fontsize=8)
+        ax.text(r +3.5, (r/2)+ 6.9 ,str(int(math.floor(MIN+(DELTA*17))))+' -|'+str(int(math.floor(MIN+(DELTA*18)))), fontsize=8)
+        ax.text(r +3.5, (r/2)+ 7.9 ,str(int(math.floor(MIN+(DELTA*18))))+' -|'+str(int(math.floor(MIN+(DELTA*19)))), fontsize=8)
+        ax.text(r +3.5, (r/2)+ 8.9 ,str(int(math.floor(MIN+(DELTA*19))))+' -|'+str(int(MAXIMO)), fontsize=8)
         
         for p in [
             patches.Rectangle(
@@ -689,8 +712,8 @@ def mapa2Dfor3D(X, Y, D, Z, intes):
         i = 0
         while(i<len(D)):
                 if(D[i] == Z):
-                        value = math.ceil((intes[i]-MIN)/DELTA)
-                        if(value == 0):
+                        value = Convert(((intes[i]-MIN)/DELTA))
+                        if(value <= 0):
                                 X0.append(X[i])
                                 Y0.append(Y[i])
                                 Z0.append(Z) 
@@ -766,7 +789,7 @@ def mapa2Dfor3D(X, Y, D, Z, intes):
                                 X18.append(X[i])
                                 Y18.append(Y[i])
                                 Z18.append(Z) 
-                        elif(value == 19):
+                        elif(value >= 19):
                                 X19.append(X[i])
                                 Y19.append(Y[i])
                                 Z19.append(Z)            
@@ -775,28 +798,31 @@ def mapa2Dfor3D(X, Y, D, Z, intes):
           , '#009688', '#4caf50', '#66bb6a', '#7cb342', '#c0ca33', '#fff176', '#fdd835'
           ,'#fb8c00' , '#ff8f00', '#f57f17', '#e65100', '#d84315', '#b71c1c')
 
+        
         r = 13.0
         ax.text(12.5, 17 ,'Intensidade', fontsize=10)
-        ax.text(r +3.5, (r/2) - 10 ,'0,00 V -|'+str(round((MIN*0.00488),2))+'V', fontsize=8)
-        ax.text(r +3.5, (r/2)- 8.9 ,str(round((MIN*0.00488),2))+'V -|'+str(round(((MIN+(DELTA*2)) *0.00488),2))+'V', fontsize=8)
-        ax.text(r +3.5, (r/2)- 7.9 ,str(round(((MIN+(DELTA*2))) *0.00488,2))+'V -|'+str(round(((MIN+(DELTA*3)) *0.00488),2))+'V', fontsize=8)
-        ax.text(r +3.5, (r/2)- 6.9 ,str(round(((MIN+(DELTA*3)) *0.00488),2))+'V -|'+str(round(((MIN+(DELTA*4)) *0.00488),2))+'V', fontsize=8)
-        ax.text(r +3.5, (r/2)- 5.9 ,str(round(((MIN+(DELTA*4)) *0.00488),2))+'V -|'+str(round(((MIN+(DELTA*5)) *0.00488),2))+'V', fontsize=8)
-        ax.text(r +3.5, (r/2)- 4.9 ,str(round(((MIN+(DELTA*5)) *0.00488),2))+'V -|'+str(round(((MIN+(DELTA*6)) *0.00488),2))+'V', fontsize=8)
-        ax.text(r +3.5, (r/2)- 3.9 ,str(round(((MIN+(DELTA*6)) *0.00488),2))+'V -|'+str(round((MIN+(DELTA*7)) *0.00488,2))+'V', fontsize=8)
-        ax.text(r +3.5, (r/2)- 2.9 ,str(round(((MIN+(DELTA*7)) *0.00488),2))+'V -|'+str(round(((MIN+(DELTA*8)) *0.00488),2))+'V', fontsize=8)
-        ax.text(r +3.5, (r/2)- 1.9 ,str(round(((MIN+(DELTA*8)) *0.00488),2))+'V -|'+str(round(((MIN+(DELTA*9)) *0.00488),2))+'V', fontsize=8)
-        ax.text(r +3.5, (r/2)- 0.9,str(round(((MIN+(DELTA*9)) *0.00488),2))+'V -|'+str(round(((MIN+(DELTA*10)) *0.00488),2))+'V', fontsize=8)
-        ax.text(r +3.5, (r/2) ,str(round(((MIN+(DELTA*10)) *0.00488),2))+'V -|'+str(round(((MIN+(DELTA*11)) *0.00488),2))+'V', fontsize=8)
-        ax.text(r +3.5, (r/2)+0.9 ,str(round(((MIN+(DELTA*11)) *0.00488),2))+'V -|'+str(round(((MIN+(DELTA*12)) *0.00488),2))+'V', fontsize=8)
-        ax.text(r +3.5, (r/2)+ 1.9 ,str(round(((MIN+(DELTA*12)) *0.00488),2))+'V -|'+str(round(((MIN+(DELTA*13)) *0.00488),2))+'V', fontsize=8)
-        ax.text(r +3.5, (r/2)+ 2.9 ,str(round(((MIN+(DELTA*13)) *0.00488),2))+'V -|'+str(round(((MIN+(DELTA*14)) *0.00488),2))+'V', fontsize=8)
-        ax.text(r +3.5, (r/2)+ 3.9 ,str(round(((MIN+(DELTA*14)) *0.00488),2))+'V -|'+str(round(((MIN+(DELTA*15)) *0.00488),2))+'V', fontsize=8)
-        ax.text(r +3.5, (r/2)+ 4.9 ,str(round(((MIN+(DELTA*15)) *0.00488),2))+'V -|'+str(round(((MIN+(DELTA*16)) *0.00488),2))+'V', fontsize=8)
-        ax.text(r +3.5, (r/2)+ 5.9 ,str(round(((MIN+(DELTA*16)) *0.00488),2))+'V -|'+str(round(((MIN+(DELTA*17)) *0.00488),2))+'V', fontsize=8)
-        ax.text(r +3.5, (r/2)+ 6.9 ,str(round(((MIN+(DELTA*17)) *0.00488),2))+'V -|'+str(round(((MIN+(DELTA*18)) *0.00488),2))+'V', fontsize=8)
-        ax.text(r +3.5, (r/2)+ 7.9 ,str(round(((MIN+(DELTA*18)) *0.00488),2))+'V -|'+str(round(((MIN+(DELTA*19)) *0.00488),2))+'V', fontsize=8)
-        ax.text(r +3.5, (r/2)+ 8.9 ,str(round(((MIN+(DELTA*19)) *0.00488),2))+'V -|'+str(round(((MIN+(DELTA*20)) *0.00488),2))+'V', fontsize=8)
+
+        ax.text(r +3.5, (r/2) - 10 ,str(int(MIN))+' -|'+str(int(math.floor(MIN+DELTA))),fontsize=8)
+        ax.text(r +3.5, (r/2)- 8.9 ,str(int(math.floor(MIN+DELTA)))+' -|'+str(int(math.floor(MIN+(DELTA*2)))), fontsize=8)
+        ax.text(r +3.5, (r/2)- 7.9 ,str(int(math.floor(MIN+(DELTA*2))))+' -|'+str(int(math.floor(MIN+(DELTA*3)))), fontsize=8)
+        ax.text(r +3.5, (r/2)- 6.9 ,str(int(math.floor(MIN+(DELTA*3))))+' -|'+str(int(math.floor(MIN+(DELTA*4)))), fontsize=8)
+        ax.text(r +3.5, (r/2)- 5.9 ,str(int(math.floor(MIN+(DELTA*4))))+' -|'+str(int(math.floor(MIN+(DELTA*5)))), fontsize=8)
+        ax.text(r +3.5, (r/2)- 4.9 ,str(int(math.floor(MIN+(DELTA*5))))+' -|'+str(int(math.floor(MIN+(DELTA*6)))), fontsize=8)
+        ax.text(r +3.5, (r/2)- 3.9 ,str(int(math.floor(MIN+(DELTA*6))))+' -|'+str(int(math.floor(MIN+(DELTA*7)))), fontsize=8)
+        ax.text(r +3.5, (r/2)- 2.9 ,str(int(math.floor(MIN+(DELTA*7))))+' -|'+str(int(math.floor(MIN+(DELTA*8)))), fontsize=8)
+        ax.text(r +3.5, (r/2)- 1.9 ,str(int(math.floor(MIN+(DELTA*8))))+' -|'+str(int(math.floor(MIN+(DELTA*9)))), fontsize=8)
+        ax.text(r +3.5, (r/2)- 0.9,str(int(math.floor(MIN+(DELTA*9))))+' -|'+str(int(math.floor(MIN+(DELTA*10)))), fontsize=8)
+        ax.text(r +3.5, (r/2) ,str(int(math.ceil(MIN+(DELTA*10))))+' -|'+str(int(math.floor(MIN+(DELTA*11)))), fontsize=8)
+        ax.text(r +3.5, (r/2)+0.9 ,str(int(math.floor(MIN+(DELTA*11))))+' -|'+str(int(math.floor(MIN+(DELTA*12)))), fontsize=8)
+        ax.text(r +3.5, (r/2)+ 1.9 ,str(int(math.floor(MIN+(DELTA*12))))+' -|'+str(int(math.floor(MIN+(DELTA*13)))), fontsize=8)
+        ax.text(r +3.5, (r/2)+ 2.9 ,str(int(math.floor(MIN+(DELTA*13))))+' -|'+str(int(math.floor(MIN+(DELTA*14)))), fontsize=8)
+        ax.text(r +3.5, (r/2)+ 3.9 ,str(int(math.floor(MIN+(DELTA*14))))+' -|'+str(int(math.floor(MIN+(DELTA*15)))), fontsize=8)
+        ax.text(r +3.5, (r/2)+ 4.9 ,str(int(math.floor(MIN+(DELTA*15))))+' -|'+str(int(math.floor(MIN+(DELTA*16)))), fontsize=8)
+        ax.text(r +3.5, (r/2)+ 5.9 ,str(int(math.floor(MIN+(DELTA*16))))+' -|'+str(int(math.floor(MIN+(DELTA*17)))), fontsize=8)
+        ax.text(r +3.5, (r/2)+ 6.9 ,str(int(math.floor(MIN+(DELTA*17))))+' -|'+str(int(math.floor(MIN+(DELTA*18)))), fontsize=8)
+        ax.text(r +3.5, (r/2)+ 7.9 ,str(int(math.floor(MIN+(DELTA*18))))+' -|'+str(int(math.floor(MIN+(DELTA*19)))), fontsize=8)
+        ax.text(r +3.5, (r/2)+ 8.9 ,str(int(math.floor(MIN+(DELTA*19))))+' -|'+str(int(MAXIMO)), fontsize=8)
+
         for p in [
             patches.Rectangle(
                 (r, (r/2) - 10), r/4, r/16,
@@ -986,13 +1012,16 @@ while (line):
     line = vfile.readline()
  
 vfile.close()
-
+#print(len(Z))
 MAXIMO = maximo_lista(intes)
 
 MIN = minimo_lista(intes)
 
-DELTA = math.ceil((MAXIMO - MIN) / 19)
-
+DELTA = (MAXIMO - MIN) / 20
+#print('Minimo'+str(MIN))
+#print('Maximo'+str(MAXIMO))
+#print('Delta'+str(DELTA))
+print('\n')
 axis = 0
 root = Tk()
 root.geometry("350x70+600+80")
